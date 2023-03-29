@@ -58,7 +58,7 @@ export default {
     changeCity (data) {
       this.$store.commit('changeCityId', data.cityId)
       this.$store.commit('changeCityName', data.name)
-      this.$router.push('/')
+      this.$router.push('/nowplaying')
     }
   },
   destroyed () {

@@ -4,21 +4,9 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    mode: 'history', // 去除#号
+    // mode: 'history', // 去除#号
     path: '/',
-    // 懒加载
-    component: () => import('@/views/film/Index'),
-    children: [
-      {
-        path: '/nowPlaying',
-        component: () => import('@/views/film/nowPlay')
-      },
-      {
-        path: '/commingSoon',
-        component: () => import('@/views/film/commingSoon')
-      }
-    ],
-    redirect: '/nowPlaying'
+    component: () => import('@/views/cinemas/city/city')
   },
   {
     path: '/detail',
@@ -33,8 +21,20 @@ const routes = [
     component: () => import('@/views/cinemas/cinemas')
   },
   {
-    path: '/city',
-    component: () => import('@/views/cinemas/city/city')
+    path: '/film',
+    // 懒加载
+    component: () => import('@/views/film/film'),
+    children: [
+      {
+        path: '/nowPlaying',
+        component: () => import('@/views/film/nowPlay')
+      },
+      {
+        path: '/commingSoon',
+        component: () => import('@/views/film/commingSoon')
+      }
+    ],
+    redirect: '/nowPlaying'
   },
   {
     path: '/search',

@@ -16,9 +16,6 @@
       "scripthost"
     ],
     "allowJs": true,
-    "extensions": [
-      ".vue"
-    ]
   },
   "vueCompilerOptions": {
     "target": 2.7

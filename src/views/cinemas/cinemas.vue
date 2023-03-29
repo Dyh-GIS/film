@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     toCity () {
-      this.$router.push('/city')
+      this.$router.push('/')
       // 清除缓存
       this.$store.commit('clearCinemaCache')
     },
